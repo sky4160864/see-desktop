@@ -1,0 +1,24 @@
+server:
+  port: 9377
+
+
+# Spring配置
+spring:
+  profiles:
+    active: dev
+  # 模板引擎
+  thymeleaf:
+    mode: HTML
+    encoding: UTF-8
+    # 禁用缓存
+    cache: false
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  # 文件上传
+  servlet:
+    multipart:
+      # 单个文件大小
+      max-file-size: 10MB
+      # 设置总上传的文件大小
+      max-request-size: 20MB

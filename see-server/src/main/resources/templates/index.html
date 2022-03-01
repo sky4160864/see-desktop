@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>SeeDesktop</title>
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link th:href="@{favicon.ico}" rel="shortcut icon"/>
+</head>
+<div class="x-screen">
+    <canvas id="screen" width="1360" height="768"></canvas>
+</div>
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/uly.js?v=1.0.0}"></script>
+<script th:inline="javascript">
+    $(function () {
+        desktop.init("screen", 1);
+    })
+</script>
